@@ -8,14 +8,18 @@ mongoose.Promise = global.Promise
 
 let app = express()
 
+app.set('view engine', 'pug')
+app.set('views', './server/views')
+
+
 app.get('/', (req, res) => {
   console.log('Express ready!')
   mongoose
     .connect(connectionString)
     .then(() => {
       console.log('MongoDB ready!')
-      res.send('OK!')
+      res.render('index')
     })
 })
-
+app.use(express.static('public'))
 app.listen(port)

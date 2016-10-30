@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/KonstantinKirchev/express-architecture/issues"
   },
-  "homepage": "https://github.com/KonstantinKirchev/express-architecture#readme"
+  "homepage": "https://github.com/KonstantinKirchev/express-architecture#readme",
+  "dependencies": {
+    "mongoose": "4.6.5"
+  }
 }

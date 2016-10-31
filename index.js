@@ -7,10 +7,6 @@ let config = require('./server/config/config')[env]
 
 require('./server/config/database')(config)
 require('./server/config/express')(app, config)
+require('./server/config/routes')(app, config)
 
-// Server and DB are up and running
-app.get('/', (req, res) => {
-  res.render('index')
-})
 
-app.listen(config.port)

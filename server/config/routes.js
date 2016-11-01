@@ -12,6 +12,10 @@ module.exports = (app, config) => {
 
   // app.get('/admin/articles', auth.isInRole('Admin'), controllers.admin.articles)
   app.get('/article/list', controllers.article.list)
+  app.get('/article/details/:id', auth.isAuthenticated, controllers.article.details)
+  app.post('/article/details/:id/delete', auth.isAuthenticated, controllers.article.delete)
+  app.get('/article/edit/:id', auth.isAuthenticated, controllers.article.edit)
+  app.post('/article/edit/:id', auth.isAuthenticated, controllers.article.editarticle)
   app.get('/article/add', auth.isAuthenticated, controllers.article.add)
   app.post('/article/create', controllers.article.create)
 

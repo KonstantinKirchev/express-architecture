@@ -21,3 +21,25 @@ h1 {
   color: red;
   font-size: 16px;
 }
+.details{
+  margin-left: 20px;
+  color: green;
+  text-decoration: none;
+}
+.edit{
+  margin-left: 20px;
+  color: darkgoldenrod;
+  text-decoration: none;
+}
+.delete{
+  margin-left: 20px;
+  color: red;
+  text-decoration: none;
+}
+.title,
+.description{
+  margin-left: 10px;
+}
+#logout-form{
+  display: inline-block;
+}

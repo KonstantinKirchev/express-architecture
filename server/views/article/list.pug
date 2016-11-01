@@ -1,3 +1,15 @@
 extends ../shared/layout
 block main-content
   h1 List of articles
+  if articles.length
+    ul
+    each i in articles
+      li=i.title + ' - '
+        a.details(href='/article/details/' + i._id) Details
+        a.edit(href='/article/edit/' + i._id) Edit
+        form#logout-form(action="/article/details/" + i._id + "/delete" method="post")
+            a.delete(href="javascript:document.getElementById('logout-form').submit()") Delete
+  else
+    p There are no articles added
+    a(href='/add') Add article
+  

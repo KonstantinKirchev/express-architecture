@@ -1,7 +1,7 @@
 extends ../shared/layout
 block main-content
   h1 Login user
-  form(method="POST" action="/users/create")
+  form(method="POST" action="/users/authenticate")
     label(for="username") Username
     br
     input(type="text" name="username" id="username")

@@ -17,3 +17,7 @@ h1 {
 .delimiter{
   margin-left: 20px;
 }
+.global-error{
+  color: red;
+  font-size: 16px;
+}

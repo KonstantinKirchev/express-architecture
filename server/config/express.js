@@ -13,6 +13,12 @@ module.exports = (app, config) => {
   app.use(session({ secret: 'neshto-taino!@#$%', resave: true, saveUninitialized: true }))
   app.use(passport.initialize())
   app.use(passport.session())
+  app.use((req, res, next) => {
+    if (req.user) {
+      res.locals.currentUser = req.user
+    }
+    next()
+  })
   app.use(express.static(config.rootPath + 'public'))
 
   console.log('Express ready!')

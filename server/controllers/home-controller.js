@@ -1,8 +1,6 @@
 module.exports = {
   index: (req, res) => {
-    res.render('home/index')
-  },
-  about: (req, res) => {
-    res.render('home/about')
+    var passedMessage = req.query.message
+    res.render('home/index', { Message: passedMessage })
   }
 }

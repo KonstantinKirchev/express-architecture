@@ -7,9 +7,11 @@ html
       ul.menu
         li
           a(href="/") Home
-        li
-          a(href="/about") About
         if (currentUser)
+          li
+            a(href="/article/list") Articles
+          li
+            a(href="/article/add") Add article
           li
             span= currentUser.username
           li

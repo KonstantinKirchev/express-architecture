@@ -18,4 +18,5 @@ module.exports = (config) => {
   })
   // to seed the admin User
   require('../data/User').seedAdminUser()
+  require('../data/Article')
 }

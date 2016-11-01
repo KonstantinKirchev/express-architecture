@@ -1,3 +1,10 @@
 extends ../shared/layout
 block main-content
-  h1 Hello!
+  if (currentUser)
+    h1 Welcome 
+    h1= currentUser.username
+    if (Message)
+      h1= Message
+  else
+    h1 Welcome to the BLOG!
+    h3 If you'd like to see the articles please register or if you are an existing user please login!

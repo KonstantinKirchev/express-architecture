@@ -16,4 +16,6 @@ module.exports = (config) => {
       console.log('The error is saved to log.txt!')
     })
   })
+  // to seed the admin User
+  require('../data/User').seedAdminUser()
 }
